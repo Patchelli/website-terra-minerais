@@ -53,3 +53,95 @@ Home
     margin-top: -150px;
     max-width: 100%;
 }
+
+.about {
+    margin-top: 300px;
+
+    &__image {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 600px;
+        height: 600px;
+        flex-shrink: 0;
+        position: relative;
+        left: -180px;
+        top: -50px;
+        box-shadow: 
+            -1px -4px 0 20px white, 
+            -1px -4px 0 21px var(--clr-primary), 
+            -16px -17px 0 32px white, 
+            -16px -17px 0 33px var(--clr-secondary);
+    }
+
+    &__text {
+        max-width: 53%;
+        margin-left: -120px;
+
+        .paragraph {
+            color: var(--clr-paragraph);
+            text-align: justify;
+            font-size: 2.2rem;
+            margin-left: 80px;
+            margin-top: -100px;
+        }
+    }
+}
+
+.products {
+    background-image: url(../images/bg-products-repeat.png);
+    background-repeat: repeat-y;
+    background-size: contain;
+
+    &__top img {
+        width: 100%;
+    }
+
+    &__item {
+        margin: 15px;
+
+        &__image {
+            background-color: #fff;
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        &__name {
+            color: #fff;
+            font-size: 2.5rem;
+            font-family: 'Karibu Light';
+            font-weight: 300;
+            margin-top: 15px;
+        }
+    }
+}
+
+.contact {
+    &__form {
+        &__input {
+            width: 100%;
+            background: none;
+            border: none;
+            border-bottom: 1px solid var(--clr-secondary);
+            height: 35px;
+            margin-bottom: 15px;
+            color: var(--clr-secondary);
+            font-size: 1.8rem;
+            padding: 5px 0;
+
+            &::placeholder {
+                color: var(--clr-secondary);
+                font-size: 1.8rem;
+            }
+        }
+
+        &__submit {
+            background: none;
+            border: none;
+            color: var(--clr-primary);
+            font-size: 1.8rem;
+            font-family: 'Karibu Bold';
+        }
+    }
+}

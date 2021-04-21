@@ -4,6 +4,8 @@ Framework
 .d-none {display: none;}
 .d-in-block {display: inline-block;}
 .d-flex {display: flex;}
+
+.flex-wrap {flex-wrap: wrap;}
 .flex-column {flex-direction: column;}
 
 .justify-center {justify-content: center;}
@@ -16,6 +18,7 @@ Framework
 
 .w-100 {width: 100%;}
 
+.text-primary {color: var(--clr-primary);}
 .text-white {color: #fff;}
 
 .text-left {text-align: left;}

@@ -18,8 +18,14 @@ body.frozen {
     overflow-y: hidden;
 }
 
-.titulo {
+.title {
     font-family: var(--font-title);
+    font-size: 10rem;
+    font-weight: 300;
+}
+
+.paragraph {
+    font-family: var(--font-paragraph);
 }
 
 .container {

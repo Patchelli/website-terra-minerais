@@ -11,6 +11,9 @@
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
+    <!-- FANCYBOX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -86,6 +89,98 @@
         </section>
 
         <div class="linhas-douradas icon icon-linhas-dourado"></div>
+
+        <section class="about d-flex">
+                <div class="about__image">
+                    <img src="https://source.unsplash.com/600x600/?building" alt="Imagem da empresa">
+                </div>
+
+                <div class="about__text">
+                    <h1 class="title text-primary">Sobre</h1>
+                    <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis dolorem dolore enim esse minima dolorum maiores, blanditiis soluta autem, inventore eius. Enim sit esse laboriosam id sint excepturi doloremque libero magnam molestias vero amet maiores totam, eos dolorem. Voluptas fuga, ipsam quo exercitationem repudiandae suscipit dicta, maiores nostrum consequatur officia nam. Voluptate earum dolorum harum alias dolorem consequatur optio. Fuga, quos eveniet quia ipsam dolor voluptates autem corrupti tenetur laudantium dignissimos. In optio minus excepturi! Temporibus dolore aperiam, quo officia modi voluptas, nihil odio reprehenderit, laborum sit nam non vel error magni tempore harum quaerat. Magnam cumque vitae necessitatibus ipsam.</p>
+                </div>
+        </section>
+
+        <div class="products__top">
+            <img src="./images/bg-products-top.png" alt="Jewels">
+        </div>
+
+        <section class="products">
+            <div class="container">
+                <h1 class="title text-primary">Produtos</h1>
+
+                <div class="products__grid d-flex flex-wrap justify-between">
+                    <div class="products__item d-flex flex-column align-center">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <h1 class="title text-primary">Contato</h1>
+
+                    <form action="#" class="contact__form">
+                        <input class="contact__form__input" type="text" name="contact-name" id="contact-name" placeholder="Nome" required>
+                        <input class="contact__form__input" type="email" name="contact-email" id="contact-email" placeholder="E-mail" required>
+                        <input class="contact__form__input" type="tel" name="contact-tel" id="contact-tel" placeholder="Telefone" required>
+                        <textarea class="contact__form__input" name="contact-message" id="contact-message" placeholder="Assunto" required></textarea>
+
+                        <button class="contact__form__submit" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -98,6 +193,7 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>AOS.init();</script>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
         <!-- build:js js/scripts.min.js -->
         <script src="./js/app.js"></script>

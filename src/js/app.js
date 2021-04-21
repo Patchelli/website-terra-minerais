@@ -21,3 +21,13 @@ $('.banner__carousel').slick({
     slidesToShow: 1,
     slidesToScroll: 1
 });
+
+/*------------------------
+Home Galeria
+------------------------*/
+$('[data-fancybox]').fancybox({
+	loop: true,
+    smallBtn: true,
+    toolbar: false,
+    transitionEffect: "slide"
+});
