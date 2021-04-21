@@ -8,11 +8,6 @@
 
     <title>Terra Minerais Brazil | Pedras preciosas</title>
 
-    <!-- FONTES -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;700&display=swap"
-        rel="stylesheet">
-
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
@@ -23,6 +18,8 @@
     <!-- build:css  css/main.min.css -->
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/custom-select.css">
+    <link rel="stylesheet" href="./css/sprites.css">
+    <link rel="stylesheet" href="./css/sprite.css">
     <!-- endbuild -->
 </head>
 
@@ -31,7 +28,9 @@
         <div class="container" data-aos="fade-down" data-aos-delay="150">
             <nav class="menu d-flex align-center justify-between">
                 <h1>
-                    <a href="#" class="menu__logo d-in-block">Logo</a>
+                    <a href="#" class="menu__logo d-in-block">
+                        <div class="icon-logo_dourado"></div>
+                    </a>
                 </h1>
 
                 <span class="menu__mobile__btn d-none"></span>
@@ -51,7 +50,13 @@
                     </li>    
                 </ul>
 
-                <a href="#">Clique aqui para traduzir</a>
+               <div class="menu__translate d-flex flex-column align-end">
+                    <span class="menu__translate__title">Clique aqui para traduzir</span>
+                    <div class="menu__translate__wrapper d-flex">
+                        <a href="#" class="d-flex align-center menu__translate__link"><i class="icon icon-usa"></i><span>English</span></a>
+                        <a href="#" class="d-flex align-center menu__translate__link"><i class="icon icon-brazil"></i><span>Portuguese</span></a>
+                    </div>
+               </div>
 
                 <div class="menu__overlay d-none"></div>
             </nav>
@@ -63,20 +68,24 @@
             <div class="banner__carousel__item">
                 <picture>
                     <div class="container">
-                        <h2 class="banner__carousel__title">Bem-Vindo</h2>
+                        <div class="banner__carousel__text d-flex flex-column align-start">
+                            <h2 class="banner__carousel__title">Perfeito e Magnífico</h2>
+                            <p class="banner__carousel__paragraph text-white text-left">
+                                A denominação "pedra preciosa" costumava ser usada apenas para o diamante, a esmeralda, o rubi e a safira, por serem as mais conhecidas e apreciadas desde a antiguidade.
+                            </p>
+                        </div>
                     </div>
-                    <img src="./images/eberhard-grossgasteiger-y2azHvupCVo-unsplash.webp" alt="Banner">
+                    <img src="./images/banner.webp" alt="Banner">
                 </picture>
             </div>
             <div class="banner__carousel__item">
                 <picture>
-                    <div class="container">
-                        <h2 class="banner__carousel__title">Bem-Vindo</h2>
-                    </div>
-                    <img src="./images/eberhard-grossgasteiger-y2azHvupCVo-unsplash.webp" alt="Banner">
+                    <img src="./images/banner.webp" alt="Banner">
                 </picture>
             </div>
         </section>
+
+        <div class="linhas-douradas icon icon-linhas-dourado"></div>
     </main>
 
     <footer>

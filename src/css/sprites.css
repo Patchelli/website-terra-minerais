@@ -8,11 +8,46 @@ Example usage in HTML:
 
 To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
 
-// CSS
+// HTML
+<i class="icon icon-home"></i>
+*/
 .icon {
   display: inline-block;
 }
 
-// HTML
-<i class="icon icon-home"></i>
-*/
+.icon-brazil {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: -518px -1084px;
+  width: 44px;
+  height: 23px;
+}
+.icon-linhas-brancas {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: 0px 0px;
+  width: 1920px;
+  height: 540px;
+}
+.icon-linhas-dourado {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: 0px -542px;
+  width: 1920px;
+  height: 540px;
+}
+.icon-logo_branco {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: -282px -1084px;
+  width: 234px;
+  height: 79px;
+}
+.icon-logo_dourado {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: 0px -1084px;
+  width: 280px;
+  height: 95px;
+}
+.icon-usa {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: -564px -1084px;
+  width: 44px;
+  height: 23px;
+}

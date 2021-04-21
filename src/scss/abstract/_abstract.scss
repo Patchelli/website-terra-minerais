@@ -1,11 +1,39 @@
-// Cores
-:root {
-    --clr-primary: #aaa;
+/*------------------------
+Fontes e Cores
+------------------------*/
+@font-face {
+    font-family: 'Amalfi';
+    src: url(../fonts/Amalfi-Coast.ttf);
+}
+@font-face {
+    font-family: 'Karibu';
+    src: url(../fonts/Karibu-Book.ttf);
+}
+@font-face {
+    font-family: 'Karibu Bold';
+    src: url(../fonts/Karibu-Bold.ttf);
+}
+@font-face {
+    font-family: 'Karibu Condensed';
+    src: url(../fonts/KaribuCondensed-Thin.ttf);
+}
+@font-face {
+    font-family: 'Karibu Thin';
+    src: url(../fonts/Karibu-Thin.ttf);
+}
+@font-face {
+    font-family: 'Karibu Light';
+    src: url(../fonts/Karibu-Light.ttf);
 }
 
-// Fontes
-$fonte-titulo: 'Poppins', sans-serif;
-$fonte-paragrafo: 'Open Sans', sans-serif;
+// Root
+:root {
+    --clr-primary: #aaa;
+
+    --font-body: 'Karibu', sans-serif;
+    --font-title: 'Amalfi', sans-serif;
+    --font-paragraph: 'Karibu', sans-serif;
+}
 
 /*------------------------
 Animacoes

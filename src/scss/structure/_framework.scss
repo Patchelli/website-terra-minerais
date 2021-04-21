@@ -7,8 +7,15 @@ Framework
 .flex-column {flex-direction: column;}
 
 .justify-center {justify-content: center;}
-.justify-between {justify-content: space-between}
+.justify-between {justify-content: space-between;}
+.justify-end {justify-content: flex-end;}
 
 .align-center {align-items: center;}
+.align-end {align-items: flex-end;}
+.align-start {align-items: flex-start;}
 
 .w-100 {width: 100%;}
+
+.text-white {color: #fff;}
+
+.text-left {text-align: left;}

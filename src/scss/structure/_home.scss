@@ -7,6 +7,24 @@ Home
     &__title {
         color: #fff;
         font-size: 5rem;
+        font-family: 'Karibu Light';
+        font-weight: 300;
+        margin-right: auto;
+        text-align: left;
+        max-width: 70%;
+        font-size: 5.5rem;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        max-width: 50%;
+        margin-right: auto;
+    }
+
+    &__paragraph {
+        max-width: 85%;
+        font-size: 1.8rem;
+        font-family: 'Karibu Light';
     }
 
     &__item {
@@ -19,6 +37,7 @@ Home
             transform: translate(-50%, -50%);
             display: flex;
             justify-content: center;
+            max-width: 1000px;
         }
     }
 
@@ -27,4 +46,10 @@ Home
         width: 100%;
         object-fit: cover;
     }
+}
+
+.linhas-douradas {
+    position: absolute;
+    margin-top: -150px;
+    max-width: 100%;
 }

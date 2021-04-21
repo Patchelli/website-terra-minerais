@@ -12,8 +12,38 @@ img {
   display: block;
 }
 
+/*------------------------
+Fontes e Cores
+------------------------*/
+@font-face {
+  font-family: "Amalfi";
+  src: url(../fonts/Amalfi-Coast.ttf);
+}
+@font-face {
+  font-family: "Karibu";
+  src: url(../fonts/Karibu-Book.ttf);
+}
+@font-face {
+  font-family: "Karibu Bold";
+  src: url(../fonts/Karibu-Bold.ttf);
+}
+@font-face {
+  font-family: "Karibu Condensed";
+  src: url(../fonts/KaribuCondensed-Thin.ttf);
+}
+@font-face {
+  font-family: "Karibu Thin";
+  src: url(../fonts/Karibu-Thin.ttf);
+}
+@font-face {
+  font-family: "Karibu Light";
+  src: url(../fonts/Karibu-Light.ttf);
+}
 :root {
   --clr-primary: #aaa;
+  --font-body: "Karibu", sans-serif;
+  --font-title: "Amalfi", sans-serif;
+  --font-paragraph: "Karibu", sans-serif;
 }
 
 /*------------------------
@@ -366,12 +396,32 @@ Framework
   justify-content: space-between;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .align-center {
   align-items: center;
 }
 
+.align-end {
+  align-items: flex-end;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
 .w-100 {
   width: 100%;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-left {
+  text-align: left;
 }
 
 /*------------------------
@@ -384,7 +434,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-body);
   height: 100%;
 }
 
@@ -392,13 +442,12 @@ body.frozen {
   overflow-y: hidden;
 }
 
-h1, h2, h3, h4,
 .titulo {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-title);
 }
 
 .container {
-  width: min(90vw, 990px);
+  width: min(90vw, 1170px);
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -422,14 +471,13 @@ header {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  height: 80px;
+  height: 95px;
+  padding-top: 100px;
 }
 
 .menu__logo {
   text-decoration: none;
-  color: #000;
   transition: 0.3s;
-  font-size: 3.5rem;
 }
 .menu__logo:hover {
   transform: scale(1.07);
@@ -439,17 +487,41 @@ header {
 }
 .menu__links__link {
   text-decoration: none;
-  color: #000;
+  color: #fff;
+  text-transform: uppercase;
   margin-left: 15px;
+  font-size: 1.8rem;
   transition: 0.3s;
 }
 .menu__links__link:hover {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.6);
+}
+.menu__translate__title {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+.menu__translate__link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+.menu__translate__link:hover {
+  transform: translateY(-5px);
+}
+.menu__translate__link span {
+  margin-left: 5px;
+  font-size: 1.4rem;
 }
 
 /*------------------------
 Body
 ------------------------*/
+.icon {
+  display: inline-block;
+}
+
 /*------------------------
 Home
 ------------------------*/
@@ -459,6 +531,22 @@ Home
 .banner__carousel__title {
   color: #fff;
   font-size: 5rem;
+  font-family: "Karibu Light";
+  font-weight: 300;
+  margin-right: auto;
+  text-align: left;
+  max-width: 70%;
+  font-size: 5.5rem;
+  margin-bottom: 20px;
+}
+.banner__carousel__text {
+  max-width: 50%;
+  margin-right: auto;
+}
+.banner__carousel__paragraph {
+  max-width: 85%;
+  font-size: 1.8rem;
+  font-family: "Karibu Light";
 }
 .banner__carousel__item {
   position: relative;
@@ -470,12 +558,19 @@ Home
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
+  max-width: 1000px;
 }
 .banner__carousel img {
   height: 100vh;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.linhas-douradas {
+  position: absolute;
+  margin-top: -150px;
+  max-width: 100%;
 }
 
 /*------------------------
