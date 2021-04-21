@@ -18,29 +18,35 @@ Fontes e Cores
 @font-face {
   font-family: "Amalfi";
   src: url(../fonts/Amalfi-Coast.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: "Karibu";
   src: url(../fonts/Karibu-Book.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: "Karibu Bold";
   src: url(../fonts/Karibu-Bold.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: "Karibu Condensed";
   src: url(../fonts/KaribuCondensed-Thin.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: "Karibu Thin";
   src: url(../fonts/Karibu-Thin.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: "Karibu Light";
   src: url(../fonts/Karibu-Light.ttf);
+  font-display: swap;
 }
 :root {
-  --clr-primary: #cd9832;
+  --clr-primary: #bd8c2c;
   --clr-secondary: #4a3c7b;
   --clr-paragraph: #6a6a6a;
   --clr-footer: #413874;
@@ -92,6 +98,114 @@ Animacoes
     transform: translateY(0px);
   }
 }
+/*------------------------
+Framework
+------------------------*/
+.d-none {
+  display: none;
+}
+
+.d-in-block {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/*------------------------
+Estrutura
+------------------------*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--font-body);
+  height: 100%;
+}
+
+body.frozen {
+  overflow-y: hidden;
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: 10rem;
+  font-weight: 300;
+}
+
+.paragraph {
+  font-family: var(--font-paragraph);
+}
+
+.container {
+  width: min(90vw, 1170px);
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 /*-------------------------
 Tema Slick Principal
 -------------------------*/
@@ -373,114 +487,6 @@ Tema Slick Customizado
 }
 
 /*------------------------
-Framework
-------------------------*/
-.d-none {
-  display: none;
-}
-
-.d-in-block {
-  display: inline-block;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-end {
-  justify-content: flex-end;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.align-end {
-  align-items: flex-end;
-}
-
-.align-start {
-  align-items: flex-start;
-}
-
-.w-100 {
-  width: 100%;
-}
-
-.text-primary {
-  color: var(--clr-primary);
-}
-
-.text-white {
-  color: #fff;
-}
-
-.text-left {
-  text-align: left;
-}
-
-/*------------------------
-Estrutura
-------------------------*/
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-size: 1.6rem;
-  font-family: var(--font-body);
-  height: 100%;
-}
-
-body.frozen {
-  overflow-y: hidden;
-}
-
-.title {
-  font-family: var(--font-title);
-  font-size: 10rem;
-  font-weight: 300;
-}
-
-.paragraph {
-  font-family: var(--font-paragraph);
-}
-
-.container {
-  width: min(90vw, 1170px);
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/*------------------------
 Header
 ------------------------*/
 header {
@@ -617,12 +623,14 @@ Home
 }
 
 .products {
-  background-image: url(../images/bg-products-repeat.png);
+  background-image: url(../images/bg-products-repeat.webp);
   background-repeat: repeat-y;
   background-size: contain;
 }
 .products__top img {
   width: 100%;
+  height: auto;
+  margin-bottom: -1px;
 }
 .products__item {
   margin: 15px;
@@ -673,11 +681,93 @@ Home
   font-family: "Karibu Bold";
 }
 
+.map {
+  position: relative;
+}
+.map iframe {
+  border: none;
+  width: 100%;
+  margin-bottom: -5px;
+}
+.map .icon-pedra {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 /*------------------------
 Footer
 ------------------------*/
-footer {
-  text-align: center;
+.footer {
+  background-color: var(--clr-footer);
+  min-height: 348px;
+  margin-top: auto;
+}
+.footer__translate__title {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+.footer__translate__link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+.footer__translate__link:hover {
+  transform: translateY(-5px);
+}
+.footer__translate__link span {
+  margin-left: 5px;
+  font-size: 1.4rem;
+}
+.footer__nav__links {
+  list-style: none;
+  position: relative;
+  margin-right: 40px;
+}
+.footer__nav__links::after {
+  content: "";
+  width: 2px;
+  height: 180px;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -20px;
+  border-radius: 2px;
+}
+.footer__nav__links__item {
+  margin-bottom: 10px;
+}
+.footer__nav__links__link {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: 15px;
+  font-size: 1.8rem;
+  transition: 0.3s;
+}
+.footer__nav__links__link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer__nav__social__item__link {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.footer__nav__social__item__link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer__nav__social__item__link .icon {
+  filter: invert(100%) sepia(80%) saturate(0%) hue-rotate(70deg) brightness(108%) contrast(101%);
+  margin-right: 10px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 5px;
 }
 
 /*------------------------

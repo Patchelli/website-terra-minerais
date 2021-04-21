@@ -3,6 +3,94 @@
 /*------------------------
 Footer
 ------------------------*/
-footer {
-    text-align: center;
+.footer {
+    background-color: var(--clr-footer);
+    min-height: 348px;
+    margin-top: auto;
+
+    &__translate {
+        &__title {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        &__link {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+            transition: .3s;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            span {
+                margin-left: 5px;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__nav {
+        &__links { 
+            list-style: none;
+            position: relative;
+            margin-right: 40px;
+
+            &::after {
+                content: '';
+                width: 2px;
+                height: 180px;
+                background-color: #fff;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -20px;
+                border-radius: 2px;
+            }
+            
+            &__item {
+                margin-bottom: 10px;
+            }
+
+            &__link {
+                text-decoration: none;
+                color: #fff;
+                text-transform: uppercase;
+                margin-left: 15px;
+                font-size: 1.8rem;
+                transition: .3s;
+    
+                &:hover {
+                    color: rgba(255, 255, 255, 0.6);
+                }
+            }
+        }
+
+        &__social {
+            &__item {
+                &__link {
+                    color: #fff;
+                    text-decoration: none;
+                    margin-bottom: 15px;
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        color: rgba(255, 255, 255, 0.6);
+                    }
+
+                    .icon {
+                        filter: invert(100%) sepia(80%) saturate(0%) hue-rotate(70deg) brightness(108%) contrast(101%);
+                        margin-right: 10px;
+                        border: 1px solid #000;
+                        border-radius: 50%;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
 }

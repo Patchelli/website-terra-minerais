@@ -88,12 +88,14 @@ Home
 }
 
 .products {
-    background-image: url(../images/bg-products-repeat.png);
+    background-image: url(../images/bg-products-repeat.webp);
     background-repeat: repeat-y;
     background-size: contain;
 
     &__top img {
         width: 100%;
+        height: auto;
+        margin-bottom: -1px;
     }
 
     &__item {
@@ -143,5 +145,21 @@ Home
             font-size: 1.8rem;
             font-family: 'Karibu Bold';
         }
+    }
+}
+
+.map {
+    position: relative;
+
+    iframe {
+        border: none;
+        width: 100%;
+        margin-bottom: -5px;
+    }
+
+    .icon-pedra {
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
 }

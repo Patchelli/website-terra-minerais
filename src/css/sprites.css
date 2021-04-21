@@ -8,46 +8,88 @@ Example usage in HTML:
 
 To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
 
-// HTML
-<i class="icon icon-home"></i>
-*/
+// CSS
 .icon {
   display: inline-block;
 }
 
+// HTML
+<i class="icon icon-home"></i>
+*/
 .icon-brazil {
   background-image: url(../images/icons/spritesheet.png);
-  background-position: -518px -1084px;
+  background-position: -1343px -542px;
   width: 44px;
   height: 23px;
 }
-.icon-linhas-brancas {
+.icon-facebook {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: -1173px -542px;
+  width: 32px;
+  height: 32px;
+}
+.icon-instagram {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: -1207px -542px;
+  width: 32px;
+  height: 32px;
+}
+.icon-linhas-dourado {
   background-image: url(../images/icons/spritesheet.png);
   background-position: 0px 0px;
   width: 1920px;
   height: 540px;
 }
-.icon-linhas-dourado {
-  background-image: url(../images/icons/spritesheet.png);
-  background-position: 0px -542px;
-  width: 1920px;
-  height: 540px;
-}
 .icon-logo_branco {
   background-image: url(../images/icons/spritesheet.png);
-  background-position: -282px -1084px;
+  background-position: -937px -542px;
   width: 234px;
   height: 79px;
 }
 .icon-logo_dourado {
   background-image: url(../images/icons/spritesheet.png);
-  background-position: 0px -1084px;
+  background-position: -655px -542px;
   width: 280px;
   height: 95px;
 }
+.icon-mail {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: -1241px -542px;
+  width: 32px;
+  height: 32px;
+}
+.icon-pedra {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: 0px -542px;
+  width: 653px;
+  height: 153px;
+}
 .icon-usa {
   background-image: url(../images/icons/spritesheet.png);
-  background-position: -564px -1084px;
+  background-position: -1389px -542px;
   width: 44px;
   height: 23px;
 }
+.icon-whatsapp-fixed {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: -1275px -542px;
+  width: 32px;
+  height: 32px;
+}
+.icon-whatsapp {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: -1309px -542px;
+  width: 32px;
+  height: 32px;
+}
+.webp .icon-brazil { background-image: url(../images/icons/spritesheet.webp); }
+.webp .icon-facebook { background-image: url(../images/icons/spritesheet.webp); }
+.webp .icon-instagram { background-image: url(../images/icons/spritesheet.webp); }
+.webp .icon-linhas-dourado { background-image: url(../images/icons/spritesheet.webp); }
+.webp .icon-logo_branco { background-image: url(../images/icons/spritesheet.webp); }
+.webp .icon-logo_dourado { background-image: url(../images/icons/spritesheet.webp); }
+.webp .icon-mail { background-image: url(../images/icons/spritesheet.webp); }
+.webp .icon-pedra { background-image: url(../images/icons/spritesheet.webp); }
+.webp .icon-usa { background-image: url(../images/icons/spritesheet.webp); }
+.webp .icon-whatsapp-fixed { background-image: url(../images/icons/spritesheet.webp); }
+.webp .icon-whatsapp { background-image: url(../images/icons/spritesheet.webp); }

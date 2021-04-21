@@ -138,6 +138,11 @@ module.exports = function (grunt) {
         expand: true,
         src: '*.html',
         dest: 'dist/'
+      },
+      fonts: {
+        expand: true,
+        src: ['fonts/**/*'],
+        dest: 'dist/'
       }
     },
 
@@ -164,7 +169,7 @@ module.exports = function (grunt) {
         options: {
           content: ['*.html', '*.js'],
           keyframes: true,
-          fontFace: true,
+          fontFace: false,
           safelist: [/^slick-/, 'slick-dots li', 'slick-dots li button', 'header.active', /^cs-/]
         },
         files: {
@@ -281,5 +286,5 @@ module.exports = function (grunt) {
   grunt.registerTask('imagens', ['imagemin:jpg', 'imagemin:jpeg', 'imagemin:png', 'imagemin:gif', 'imagemin:svg']);
   
   // Task padrao.
-  grunt.registerTask('dist', ['clean:all', 'sprite', 'svg_sprite', 'copy:imagens', 'imagens', 'cwebp', 'copy:html', 'useminPrepare', 'webpcss', 'concat', 'purgecss', 'uglify:scripts', 'cssmin:main', 'usemin', 'clean:temp']);
+  grunt.registerTask('dist', ['clean:all', 'sprite', 'copy:imagens', 'imagens', 'cwebp', 'copy:html', 'copy:fonts', 'useminPrepare', 'webpcss', 'concat', 'purgecss', 'uglify:scripts', 'cssmin:main', 'usemin', 'clean:temp']);
 };
