@@ -4,11 +4,11 @@
 Header
 ------------------------*/
 header {
-    position: absolute;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
-    padding-top: 100px;
+    z-index: 9;
+    padding-top: 30px;
 }
 
 .menu {
