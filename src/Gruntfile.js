@@ -149,7 +149,7 @@ module.exports = function (grunt) {
     clean: {
       temp: ['.tmp'],
       all: ['dist/', 'images/icons/spritesheet.png'],
-      sprite: ['images/icons/spritesheet.png']
+      sprite: ['images/icons/spritesheet.png', 'images/svg/originals', 'images/svg/symbol']
     },
 
     'dart-sass': {
@@ -247,15 +247,18 @@ module.exports = function (grunt) {
         expand: true,
         cwd: 'images/svg',
         src: ['**/*.svg'],
-        dest: 'dist/images/svg',
+        dest: 'images/svg/',
 
         options: {
+          shape: {
+            dimension: {
+              maxWidth: 50,
+              maxHeight: 50
+            },
+            dest: 'originals/'
+          },
           mode: {
-            css: {
-                render: {
-                  css: true
-                }
-            }
+           symbol: true
           }
         }
       }
@@ -286,5 +289,5 @@ module.exports = function (grunt) {
   grunt.registerTask('imagens', ['imagemin:jpg', 'imagemin:jpeg', 'imagemin:png', 'imagemin:gif', 'imagemin:svg']);
   
   // Task padrao.
-  grunt.registerTask('dist', ['clean:all', 'sprite', 'copy:imagens', 'imagens', 'cwebp', 'copy:html', 'copy:fonts', 'useminPrepare', 'webpcss', 'concat', 'purgecss', 'uglify:scripts', 'cssmin:main', 'usemin', 'clean:temp']);
+  grunt.registerTask('dist', ['clean:all', 'sprite', 'svg_sprite','copy:imagens', 'imagens', 'cwebp', 'copy:html', 'copy:fonts', 'useminPrepare', 'webpcss', 'concat', 'purgecss', 'uglify:scripts', 'cssmin:main', 'usemin', 'clean:temp']);
 };

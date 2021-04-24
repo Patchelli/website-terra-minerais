@@ -1,21 +1,31 @@
 /*------------------------
 Responsivo
 ------------------------*/
-@media screen and (max-width:615px){
+@media screen and (max-width:960px){
+    header {
+        background-color: #000;
+        height: 150px;
+        padding-top: 0;
+    }
+
     .menu {
+        h1 {
+            margin: 0 auto;
+        }
+
         &__overlay {
             transition: .3s;
         }
 
         &__links {
             position: fixed;
-            top: 0;
+            top: 126px;
             bottom: 0;
-            left: -116%;
+            left: -100%;
             right: 0;
-            background: #cccccc;
-            height: 100vh;
-            width: 78vw;
+            background: var(--clr-primary);
+            height: calc(100vh - 120px);
+            width: 86vw;
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
@@ -36,7 +46,7 @@ Responsivo
             display: block;
             width: 40px;
             height: 5px;
-            background: #000;
+            background: #fff;
             border-radius: 5px;
             transition: .3s;
         }
@@ -48,13 +58,22 @@ Responsivo
         &__mobile__btn::after {
             margin-top: 3px;
         }
+
+        &__translate {
+            display: none;
+        }
     }
 
     .menu.active {
+        .menu__logo {
+            position: relative;
+            z-index: 1;
+        }
+
         .menu__links {
             display: flex;
             flex-direction: column;
-            left: -27px;
+            left: -10vw;
             z-index: 1;
 
             &__link {
@@ -66,12 +85,12 @@ Responsivo
             display: block;
             position: absolute;
             background: #1b1b1b5e;
-            top: 0;
-            left: 0;
+            top: 126px;
+            left: -10vw;
             right: 0;
             bottom: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 110vw;
+            height: 110vh;
             animation: slideRight .3s;
             cursor: pointer;
         }
