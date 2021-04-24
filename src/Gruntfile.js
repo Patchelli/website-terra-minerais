@@ -252,8 +252,12 @@ module.exports = function (grunt) {
         options: {
           shape: {
             dimension: {
-              maxWidth: 50,
-              maxHeight: 50
+              maxWidth: 250,
+              maxHeight: 95
+            },
+            spacing: {
+              padding: 0,
+              box: 'content'
             },
             dest: 'originals/'
           },
@@ -289,5 +293,5 @@ module.exports = function (grunt) {
   grunt.registerTask('imagens', ['imagemin:jpg', 'imagemin:jpeg', 'imagemin:png', 'imagemin:gif', 'imagemin:svg']);
   
   // Task padrao.
-  grunt.registerTask('dist', ['clean:all', 'sprite', 'svg_sprite','copy:imagens', 'imagens', 'cwebp', 'copy:html', 'copy:fonts', 'useminPrepare', 'webpcss', 'concat', 'purgecss', 'uglify:scripts', 'cssmin:main', 'usemin', 'clean:temp']);
+  grunt.registerTask('dist', ['clean:all', 'sprite','copy:imagens', 'imagens', 'cwebp', 'copy:html', 'copy:fonts', 'useminPrepare', 'webpcss', 'concat', 'purgecss', 'uglify:scripts', 'cssmin:main', 'usemin', 'clean:temp']);
 };

@@ -490,11 +490,11 @@ Tema Slick Customizado
 Header
 ------------------------*/
 header {
-  position: absolute;
+  position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
-  padding-top: 100px;
+  z-index: 9;
+  padding-top: 30px;
 }
 
 .menu__logo {
@@ -596,7 +596,10 @@ Home
 }
 
 .about {
-  margin-top: 300px;
+  margin-top: 180px;
+  margin-bottom: -88px;
+  z-index: 1;
+  position: relative;
 }
 .about__image {
   border-radius: 50%;
@@ -611,12 +614,11 @@ Home
 }
 .about__text {
   max-width: 53%;
-  margin-left: -120px;
+  margin-left: -77px;
 }
 .about__text .paragraph {
   color: var(--clr-paragraph);
   text-align: justify;
-  font-size: 2.2rem;
   margin-left: 80px;
   margin-top: -100px;
 }
@@ -625,6 +627,11 @@ Home
   background-image: url(../images/bg-products-repeat.webp);
   background-repeat: repeat-y;
   background-size: contain;
+}
+.products .icon-pedra {
+  transform: scaleX(-1);
+  display: block;
+  margin-left: auto;
 }
 .products__top img {
   width: 100%;
@@ -649,6 +656,11 @@ Home
   margin-top: 15px;
 }
 
+.contact {
+  background-color: white;
+  padding-bottom: 50px;
+  margin-bottom: -30px;
+}
 .contact__form__input {
   width: 100%;
   background: none;
@@ -678,6 +690,12 @@ Home
   color: var(--clr-primary);
   font-size: 1.8rem;
   font-family: "Karibu Bold";
+}
+
+.linhas-brancas {
+  position: absolute;
+  margin-top: -150px;
+  max-width: 100%;
 }
 
 .map {
@@ -767,6 +785,9 @@ Footer
   border: 1px solid #000;
   border-radius: 50%;
   padding: 5px;
+  height: 25px;
+  width: 25px;
+  overflow: visible;
 }
 
 /*------------------------
