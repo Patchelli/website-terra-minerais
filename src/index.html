@@ -8,92 +8,315 @@
 
     <title>Terra Minerais Brazil | Pedras preciosas</title>
 
-    <!-- FONTES -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;700&display=swap"
-        rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./images/favicon.webp" type="image/x-icon">
+
+    <!-- META -->
+    <meta name="theme-color" content="#000" />
+    <meta name="description" content="Author: Terra Minerais,
+    Importadora e Exportadora de pedras preciosas e mineirais.">
 
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" /> -->
+
+    <!-- FANCYBOX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- PRELOAD -->
+    <link rel="preload" as="image" href="./images/icons/spritesheet.webp" />
+    <link rel="preload" href="./fonts/Amalfi-Coast.ttf" as="font" type="font/ttf" crossorigin />
 
     <!-- build:css  css/main.min.css -->
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/custom-select.css">
+    <link rel="stylesheet" href="./css/sprites.css">
     <!-- endbuild -->
 </head>
 
 <body class="webp">
     <header class="d-flex align-center w-100">
         <div class="container" data-aos="fade-down" data-aos-delay="150">
-            <nav class="menu d-flex align-center justify-between">
+            <nav class="menu d-flex align-center justify-between flex-wrap">
                 <h1>
-                    <a href="#" class="menu__logo d-in-block">Logo</a>
+                    <a href="#" class="menu__logo d-in-block">
+                        <!-- <svg class="icon"><use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#logo_dourado"></svg> -->
+                        <img src="./images/svg/logo_dourado.svg" width="250" height="95">
+                    </a>
                 </h1>
-
-                <span class="menu__mobile__btn d-none"></span>
 
                 <ul class="menu__links d-flex">
                     <li class="menu__links__item">
-                        <a href="#" class="menu__links__link">Início</a>
+                        <a href="#banner" class="menu__links__link">Início</a>
                     </li>
                     <li class="menu__links__item">
-                        <a href="#" class="menu__links__link">Sobre</a>
+                        <a href="#about" class="menu__links__link">Sobre</a>
                     </li>
                     <li class="menu__links__item">
-                        <a href="#" class="menu__links__link">Galeria</a>
-                    </li>    
+                        <a href="#products" class="menu__links__link">Galeria</a>
+                    </li>
                     <li class="menu__links__item">
-                        <a href="#" class="menu__links__link">Contato</a>
-                    </li>    
+                        <a href="#contact" class="menu__links__link">Contato</a>
+                    </li>
                 </ul>
 
-                <a href="#">Clique aqui para traduzir</a>
+                <div class="menu__translate d-flex flex-column align-end">
+                    <span class="menu__translate__title">Clique aqui para traduzir</span>
+                    <div class="menu__translate__wrapper d-flex">
+                        <a href="#" class="d-flex align-center menu__translate__link"><i class="icon icon-usa"
+                                aria-label="icone-usa"></i><span>English</span></a>
+                        <a href="#" class="d-flex align-center menu__translate__link"><i class="icon icon-brazil"
+                                aria-label="icone-brazil"></i><span>Portuguese</span></a>
+                    </div>
+                </div>
 
+                <span class="menu__mobile__btn d-none"></span>
                 <div class="menu__overlay d-none"></div>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="banner__carousel" data-aos="fade-down">
+        <section id="banner" class="banner__carousel" data-aos="fade-down">
             <div class="banner__carousel__item">
                 <picture>
                     <div class="container">
-                        <h2 class="banner__carousel__title">Bem-Vindo</h2>
+                        <div class="banner__carousel__text d-flex flex-column align-start">
+                            <h2 class="banner__carousel__title">Perfeito e Magnífico</h2>
+                            <p class="banner__carousel__paragraph text-white text-left">
+                                A denominação "pedra preciosa" costumava ser usada apenas para o diamante, a esmeralda,
+                                o rubi e a safira, por serem as mais conhecidas e apreciadas desde a antiguidade.
+                            </p>
+                        </div>
                     </div>
-                    <img src="./images/eberhard-grossgasteiger-y2azHvupCVo-unsplash.webp" alt="Banner">
+                    <img src="./images/banner.webp" alt="Banner">
                 </picture>
             </div>
             <div class="banner__carousel__item">
                 <picture>
-                    <div class="container">
-                        <h2 class="banner__carousel__title">Bem-Vindo</h2>
-                    </div>
-                    <img src="./images/eberhard-grossgasteiger-y2azHvupCVo-unsplash.webp" alt="Banner">
+                    <img src="./images/banner.webp" alt="Banner">
                 </picture>
             </div>
         </section>
+
+        <div class="linhas-douradas icon icon-linhas-dourado"></div>
+
+        <section id="about" class="about d-flex" data-aos="fade-up">
+            <div class="about__image">
+                <img src="https://source.unsplash.com/600x600/?building" alt="Imagem da empresa" loading="lazy"
+                    height="600" width="600">
+            </div>
+
+            <div class="about__text" data-aos="fade-up">
+                <h1 class="title text-primary">Sobre</h1>
+                <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis dolorem dolore
+                    enim esse minima dolorum maiores, blanditiis soluta autem, inventore eius. Enim sit esse laboriosam
+                    id sint excepturi doloremque libero magnam molestias vero amet maiores totam, eos dolorem. Voluptas
+                    fuga, ipsam quo exercitationem repudiandae suscipit dicta, maiores nostrum consequatur officia nam.
+                    Voluptate earum dolorum harum alias dolorem consequatur optio. Fuga, quos eveniet quia ipsam dolor
+                    voluptates autem corrupti tenetur laudantium dignissimos. In optio minus excepturi! Temporibus
+                    dolore aperiam, quo officia modi voluptas, nihil odio reprehenderit, laborum sit nam non vel error
+                    magni tempore harum quaerat. Magnam cumque vitae necessitatibus ipsam.</p>
+            </div>
+        </section>
+
+        <div class="products__top" data-aos="fade-up">
+            <img src="./images/bg-products-top.webp" alt="Jewels" loading="lazy">
+        </div>
+
+        <section id="products" class="products">
+            <div class="container">
+                <h1 class="title text-primary">Produtos</h1>
+
+                <div class="products__grid d-flex flex-wrap justify-between">
+                    <div class="products__item d-flex flex-column align-center" data-aos="fade-right"
+                        data-aos-delay="250">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img
+                                    src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem" loading="lazy"
+                                    height="210" width="210"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center" data-aos="fade-right"
+                        data-aos-delay="350">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img
+                                    src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem" loading="lazy"
+                                    height="210" width="210"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center" data-aos="fade-right"
+                        data-aos-delay="450">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img
+                                    src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem" loading="lazy"
+                                    height="210" width="210"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center" data-aos="fade-right"
+                        data-aos-delay="550">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img
+                                    src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem" loading="lazy"
+                                    height="210" width="210"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center" data-aos="fade-right"
+                        data-aos-delay="250">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img
+                                    src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem" loading="lazy"
+                                    height="210" width="210"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center" data-aos="fade-right"
+                        data-aos-delay="350">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img
+                                    src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem" loading="lazy"
+                                    height="210" width="210"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center" data-aos="fade-right"
+                        data-aos-delay="450">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img
+                                    src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem" loading="lazy"
+                                    height="210" width="210"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+
+                    <div class="products__item d-flex flex-column align-center" data-aos="fade-right"
+                        data-aos-delay="550">
+                        <div class="products__item__image">
+                            <a data-fancybox="gallery" href="https://source.unsplash.com/610x610/?gem"><img
+                                    src="https://source.unsplash.com/210x210/?gem" alt="Rare Gem" loading="lazy"
+                                    height="210" width="210"></a>
+                        </div>
+                        <p class="products__item__name">Ametista</p>
+                    </div>
+                </div>
+
+                <div id="contact" class="contact" data-aos="fade-up-right" data-aos-delay="700">
+                    <h1 class="title text-primary">Contato</h1>
+
+                    <form action="#" class="contact__form">
+                        <input class="contact__form__input" type="text" name="contact-name" id="contact-name"
+                            placeholder="Nome" required>
+                        <input class="contact__form__input" type="email" name="contact-email" id="contact-email"
+                            placeholder="E-mail" required>
+                        <input class="contact__form__input" type="tel" name="contact-tel" id="contact-tel"
+                            placeholder="Telefone" required>
+                        <textarea class="contact__form__input" name="contact-message" id="contact-message"
+                            placeholder="Assunto" required></textarea>
+
+                        <button class="contact__form__submit" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="map">
+            <i class="icon icon-pedra" aria-label="icone-pedra"></i>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6213.416959155212!2d-77.06564250432604!3d38.86202957202933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b6df2cba7f45%3A0x43b87a33d7402523!2sPentagon%20City%2C%20Arlington%2C%20VA%2022202%2C%20USA!5e0!3m2!1sen!2sbr!4v1619014192969!5m2!1sen!2sbr"
+                height="700" loading="lazy"></iframe>
+        </section>
     </main>
 
-    <footer>
-        <div class="container">
-            Footer
+    <footer class="footer d-flex align-center">
+        <div class="container d-flex justify-between align-center">
+            <div class="footer__logo">
+                <i class="icon icon-logo_branco"></i>
+            </div>
+
+            <div class="footer__translate d-flex flex-column align-start">
+                <span class="footer__translate__title">Clique aqui para traduzir</span>
+                <div class="footer__translate__wrapper d-flex">
+                    <a href="#" class="d-flex align-center footer__translate__link"><i class="icon icon-usa"
+                            aria-label="icone-usa"></i><span>English</span></a>
+                    <a href="#" class="d-flex align-center footer__translate__link"><i class="icon icon-brazil"
+                            aria-label="icone-brazil"></i><span>Portuguese</span></a>
+                </div>
+            </div>
+
+            <div class="footer__nav d-flex align-center">
+                <ul class="footer__nav__links d-flex flex-column align-end">
+                    <li class="footer__nav__links__item">
+                        <a href="#banner" class="footer__nav__links__link">Início</a>
+                    </li>
+                    <li class="footer__nav__links__item">
+                        <a href="#about" class="footer__nav__links__link">Sobre</a>
+                    </li>
+                    <li class="footer__nav__links__item">
+                        <a href="#products" class="footer__nav__links__link">Galeria</a>
+                    </li>
+                    <li class="footer__nav__links__item">
+                        <a href="#contact" class="footer__nav__links__link">Contato</a>
+                    </li>
+                </ul>
+
+                <div class="footer__nav__social d-flex flex-column">
+                    <div class="footer__nav__social__item d-flex">
+                        <a class="footer__nav__social__item__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="icon icon-facebook"></i>
+                            <span>terraminerais</span>
+                        </a>
+                    </div>
+
+                    <div class="footer__nav__social__item d-flex">
+                        <a class="footer__nav__social__item__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="icon icon-instagram"></i>
+                            <span>terraminerais</span>
+                        </a>
+                    </div>
+
+                    <div class="footer__nav__social__item d-flex">
+                        <a class="footer__nav__social__item__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="icon icon-mail"></i>
+                            <span>terraminerais</span>
+                        </a>
+                    </div>
+
+                    <div class="footer__nav__social__item d-flex">
+                        <a class="footer__nav__social__item__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="icon icon-whatsapp"></i>
+                            <span>terraminerais</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- SCRIPTS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>AOS.init();</script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
         <!-- build:js js/scripts.min.js -->
         <script src="./js/app.js"></script>
-        <script src="./js/custom-select.js"></script>
         <!-- endbuild -->
     </footer>
 </body>
+
 </html>

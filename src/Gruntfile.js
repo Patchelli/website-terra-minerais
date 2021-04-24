@@ -88,7 +88,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'images/',
           src: ['**/*.svg'],
-          dest: 'dist/images/'
+          dest: 'dist/images/svg'
         }]
       }
     },
@@ -138,13 +138,18 @@ module.exports = function (grunt) {
         expand: true,
         src: '*.html',
         dest: 'dist/'
+      },
+      fonts: {
+        expand: true,
+        src: ['fonts/**/*'],
+        dest: 'dist/'
       }
     },
 
     clean: {
       temp: ['.tmp'],
       all: ['dist/', 'images/icons/spritesheet.png'],
-      sprite: ['images/icons/spritesheet.png']
+      sprite: ['images/icons/spritesheet.png', 'images/svg/originals', 'images/svg/symbol']
     },
 
     'dart-sass': {
@@ -164,7 +169,7 @@ module.exports = function (grunt) {
         options: {
           content: ['*.html', '*.js'],
           keyframes: true,
-          fontFace: true,
+          fontFace: false,
           safelist: [/^slick-/, 'slick-dots li', 'slick-dots li button', 'header.active', /^cs-/]
         },
         files: {
@@ -207,13 +212,13 @@ module.exports = function (grunt) {
     },
 
     watch: {
-      css: {
-        files: ['scss/**/*.scss'],
-        tasks: ['dart-sass'],
-        options: {
-          nospawn: true
-        }
-      },
+      // css: {
+      //   files: ['scss/**/*.scss'],
+      //   tasks: ['dart-sass'],
+      //   options: {
+      //     nospawn: true
+      //   }
+      // },
       images: {
         files: ['images/**/*'],
         tasks: ['imagemin', 'cwebp', 'clean:sprite', 'sprite'],
@@ -233,6 +238,28 @@ module.exports = function (grunt) {
         files: {
           'css/main.css':['css/main.css'],
           'css/sprites.css':['css/sprites.css']
+        }
+      }
+    },
+
+    svg_sprite: {
+      basic: {
+        expand: true,
+        cwd: 'images/svg',
+        src: ['**/*.svg'],
+        dest: 'images/svg/',
+
+        options: {
+          shape: {
+            dimension: {
+              maxWidth: 50,
+              maxHeight: 50
+            },
+            dest: 'originals/'
+          },
+          mode: {
+           symbol: true
+          }
         }
       }
     }
@@ -256,10 +283,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-cwebp');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-webpcss');
+  grunt.loadNpmTasks('grunt-svg-sprite');
 
   // Registro de tasks.
   grunt.registerTask('imagens', ['imagemin:jpg', 'imagemin:jpeg', 'imagemin:png', 'imagemin:gif', 'imagemin:svg']);
   
   // Task padrao.
-  grunt.registerTask('dist', ['clean:all', 'sprite', 'copy:imagens', 'imagens', 'cwebp', 'copy:html', 'useminPrepare', 'webpcss', 'concat', 'purgecss', 'uglify:scripts', 'cssmin:main', 'usemin', 'clean:temp']);
+  grunt.registerTask('dist', ['clean:all', 'sprite', 'svg_sprite','copy:imagens', 'imagens', 'cwebp', 'copy:html', 'copy:fonts', 'useminPrepare', 'webpcss', 'concat', 'purgecss', 'uglify:scripts', 'cssmin:main', 'usemin', 'clean:temp']);
 };

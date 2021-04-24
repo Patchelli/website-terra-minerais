@@ -10,7 +10,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: $fonte-paragrafo;
+    font-family: var(--font-body);
     height: 100%;
 }
 
@@ -18,13 +18,18 @@ body.frozen {
     overflow-y: hidden;
 }
 
-h1, h2, h3, h4,
-.titulo {
-    font-family: $fonte-titulo;
+.title {
+    font-family: var(--font-title);
+    font-size: 10rem;
+    font-weight: 300;
+}
+
+.paragraph {
+    font-family: var(--font-paragraph);
 }
 
 .container {
-    width: min(90vw, 990px);
+    width: min(90vw, 1170px);
     padding: 0 15px;
     margin: 0 auto;
 }
