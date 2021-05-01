@@ -9,12 +9,16 @@ header {
     transform: translateX(-50%);
     z-index: 99;
     padding-top: 30px;
+    transition: .3s;
 }
 
 .menu {
     &__logo {
-        text-decoration: none;
         transition: .3s;
+
+        img {
+            transition: .3s;
+        }
 
         &:hover {
             transform: scale(1.07);
@@ -22,6 +26,7 @@ header {
     }
 
     &__links { 
+        flex-basis: 63%;
         list-style: none;
 
         &__link {
