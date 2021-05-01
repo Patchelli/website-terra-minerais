@@ -69,10 +69,10 @@ Home
         position: relative;
         left: -180px;
         top: -50px;
-        box-shadow: 
-            -1px -4px 0 20px white, 
-            -1px -4px 0 21px var(--clr-primary), 
-            -16px -17px 0 32px white, 
+        box-shadow:
+            -1px -4px 0 20px white,
+            -1px -4px 0 21px var(--clr-primary),
+            -16px -17px 0 32px white,
             -16px -17px 0 33px var(--clr-secondary);
     }
 
@@ -85,6 +85,8 @@ Home
             text-align: justify;
             margin-left: 80px;
             margin-top: -100px;
+            font-size: 1.4rem;
+            max-width: 535px;
         }
     }
 }
@@ -94,10 +96,21 @@ Home
     background-repeat: repeat-y;
     background-size: contain;
 
+    .container {
+        width: min(90vw, 1129px);
+    }
+
+    &__top {
+        position: relative;
+        z-index: 9;
+    }
+
     .icon-pedra {
         transform: scaleX(-1);
         display: block;
         margin-left: auto;
+        z-index: 2;
+        position: relative;
     }
 
     &__top img {
@@ -111,10 +124,23 @@ Home
 
         &__image {
             background-color: #fff;
-            width: 210px;
-            height: 210px;
+            width: 190px;
+            height: 190px;
             border-radius: 50%;
             overflow: hidden;
+            position: relative;
+
+            &--wrap {
+                &::before {
+                    content: url(../images/icons/produto.webp);
+                    position: absolute;
+                    left: -16px;
+                    right: 0;
+                    top: -12px;
+                    bottom: 0;
+                    z-index: 0;
+                }
+            }
         }
 
         &__name {
@@ -128,25 +154,36 @@ Home
 }
 
 .contact {
-    background-color: rgb(255, 255, 255);
     padding-bottom: 50px;
     margin-bottom: -30px;
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+
+    .title {
+        font-size: 7rem;
+        margin-bottom: -35px;
+        margin-top: 35px;
+        margin-left: 50px;
+    }
 
     &__form {
+        textarea { resize: none; }
+
         &__input {
             width: 100%;
             background: none;
             border: none;
             border-bottom: 1px solid var(--clr-secondary);
             height: 35px;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
             color: var(--clr-secondary);
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             padding: 5px 0;
 
             &::placeholder {
                 color: var(--clr-secondary);
-                font-size: 1.8rem;
+                font-size: 1.4rem;
             }
         }
 
@@ -156,14 +193,69 @@ Home
             color: var(--clr-primary);
             font-size: 1.8rem;
             font-family: 'Karibu Bold';
+            margin-left: auto;
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    &__message {
+        flex-basis: 70%;
+
+        &__form {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            width: 100%;
+            left: 23%;
+        }
+
+        .icon {
+            width: 870px;
+            height: 600px;
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    &__nav {
+        &__social {
+            margin-top: auto;
+            margin-left: auto;
+
+            &__item {
+                &__link {
+                    color: #fff;
+                    text-decoration: none;
+                    margin-bottom: 15px;
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        color: rgba(255, 255, 255, 0.6);
+                    }
+
+                    .icon {
+                        filter: invert(50%) sepia(96%) saturate(321%) hue-rotate(1deg) brightness(93%) contrast(96%);
+                        margin-right: 10px;
+                        border: 1px solid #000;
+                        border-radius: 50%;
+                        padding: 5px;
+                        height: 25px;
+                        width: 25px;
+                        overflow: visible;
+                    }
+                }
+            }
         }
     }
 }
 
 .linhas-brancas {
-    position: absolute;
-    margin-top: -150px;
+    margin-top: -526px;
     max-width: 100%;
+    position: relative;
+    z-index: 0;
 }
 
 .map {
