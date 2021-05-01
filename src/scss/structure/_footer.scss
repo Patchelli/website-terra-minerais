@@ -8,6 +8,12 @@ Footer
     min-height: 348px;
     margin-top: auto;
 
+    &__logo {
+        .icon {
+            width: 239px;
+        }
+    }
+
     &__translate {
         &__title {
             color: #fff;

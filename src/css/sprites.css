@@ -40,6 +40,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 653px;
   height: 153px;
 }
+.icon-produto {
+  background-image: url(../images/icons/spritesheet.png);
+  background-position: 0px -1239px;
+  width: 213px;
+  height: 210px;
+}
 .icon-usa {
   background-image: url(../images/icons/spritesheet.png);
   background-position: -701px -1084px;
@@ -50,4 +56,5 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 .webp .icon-linhas-brancas { background-image: url(../images/icons/spritesheet.webp); }
 .webp .icon-linhas-dourado { background-image: url(../images/icons/spritesheet.webp); }
 .webp .icon-pedra { background-image: url(../images/icons/spritesheet.webp); }
+.webp .icon-produto { background-image: url(../images/icons/spritesheet.webp); }
 .webp .icon-usa { background-image: url(../images/icons/spritesheet.webp); }
