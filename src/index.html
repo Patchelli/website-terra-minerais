@@ -38,7 +38,7 @@
 
 <body class="webp">
     <header class="d-flex align-center w-100">
-        <div class="container" data-aos="fade-down" data-aos-delay="150">
+        <div class="container mobile-fix" data-aos="fade-down" data-aos-delay="150">
             <nav class="menu d-flex align-center justify-between flex-wrap">
                 <h1>
                     <a href="#" class="menu__logo d-in-block">
@@ -64,10 +64,10 @@
                         <div class="menu__translate d-flex flex-column align-end">
                             <span class="menu__translate__title">Clique aqui para traduzir</span>
                             <div class="menu__translate__wrapper d-flex">
-                                <a href="#" class="d-flex align-center menu__translate__link"><i class="icon icon-usa"
-                                        aria-label="icone-usa"></i><span>English</span></a>
-                                <a href="#" class="d-flex align-center menu__translate__link"><i class="icon icon-brazil"
-                                        aria-label="icone-brazil"></i><span>Portuguese</span></a>
+                                <a href="#" class="d-flex align-center menu__translate__link"><i
+                                        class="icon icon-usa"></i><span>English</span></a>
+                                <a href="#" class="d-flex align-center menu__translate__link"><i
+                                        class="icon icon-brazil"></i><span>Portuguese</span></a>
                             </div>
                         </div>
                     </li>
@@ -246,48 +246,52 @@
                                     placeholder="Telefone" required>
                                 <textarea class="contact__form__input" name="contact-message" id="contact-message"
                                     placeholder="Assunto" required></textarea>
-    
+
                                 <button class="contact__form__submit" type="submit">Enviar</button>
                             </form>
                         </div>
 
                         <svg class="icon">
-                            <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#contato">
+                            <use xlink:href="./images/svg/symbol/svg/sprite.symbol.svg#contato" />
                         </svg>
                     </div>
 
                     <div class="contact__nav__social d-flex flex-column">
                         <div class="contact__nav__social__item d-flex">
-                            <a class="contact__nav__social__item__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <a class="contact__nav__social__item__link" href="#" target="_blank"
+                                rel="noopener noreferrer">
                                 <svg class="icon">
-                                    <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#facebook">
+                                    <use xlink:href="./images/svg/symbol/svg/sprite.symbol.svg#facebook" />
                                 </svg>
                                 <span>terraminerais</span>
                             </a>
                         </div>
-    
+
                         <div class="contact__nav__social__item d-flex">
-                            <a class="contact__nav__social__item__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <a class="contact__nav__social__item__link" href="#" target="_blank"
+                                rel="noopener noreferrer">
                                 <svg class="icon">
-                                    <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#instagram">
+                                    <use xlink:href="./images/svg/symbol/svg/sprite.symbol.svg#instagram" />
                                 </svg>
                                 <span>terraminerais</span>
                             </a>
                         </div>
-    
+
                         <div class="contact__nav__social__item d-flex">
-                            <a class="contact__nav__social__item__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <a class="contact__nav__social__item__link" href="#" target="_blank"
+                                rel="noopener noreferrer">
                                 <svg class="icon">
-                                    <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#mail">
+                                    <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#mail" />
                                 </svg>
                                 <span>terraminerais</span>
                             </a>
                         </div>
-    
+
                         <div class="contact__nav__social__item d-flex">
-                            <a class="contact__nav__social__item__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <a class="contact__nav__social__item__link" href="#" target="_blank"
+                                rel="noopener noreferrer">
                                 <svg class="icon">
-                                    <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#whatsapp">
+                                    <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#whatsapp" />
                                 </svg>
                                 <span>terraminerais</span>
                             </a>
@@ -297,11 +301,11 @@
             </div>
 
             <div class="linhas-brancas icon icon-linhas-brancas"></div>
-            <i class="icon icon-pedra" aria-label="icone-pedra"></i>
+            <i class="icon icon-pedra"></i>
         </section>
 
         <section id="map" class="map">
-            <i class="icon icon-pedra" aria-label="icone-pedra"></i>
+            <i class="icon icon-pedra"></i>
 
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6213.416959155212!2d-77.06564250432604!3d38.86202957202933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b6df2cba7f45%3A0x43b87a33d7402523!2sPentagon%20City%2C%20Arlington%2C%20VA%2022202%2C%20USA!5e0!3m2!1sen!2sbr!4v1619014192969!5m2!1sen!2sbr"
@@ -310,20 +314,30 @@
     </main>
 
     <footer class="footer d-flex align-center">
+        <!-- Whatsapp Fixed -->
+        <svg class="icon-whatsapp-fixed">
+            <use xlink:href="./images/svg/symbol/svg/sprite.symbol.svg#whatsapp-fixed" />
+        </svg>
+
+        <!-- Roll Top -->
+        <div class="icon-arrow-fixed">
+            <img src="./images/svg/arrow-top.svg" alt="Arrow">
+        </div>
+
         <div class="container d-flex justify-between align-center">
             <div class="footer__logo">
                 <svg class="icon">
-                    <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#logo_branco" width="239">
+                    <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#logo_branco" width="239" />
                 </svg>
             </div>
 
             <div class="footer__translate d-flex flex-column align-start">
                 <span class="footer__translate__title">Clique aqui para traduzir</span>
                 <div class="footer__translate__wrapper d-flex">
-                    <a href="#" class="d-flex align-center footer__translate__link"><i class="icon icon-usa"
-                            aria-label="icone-usa"></i><span>English</span></a>
-                    <a href="#" class="d-flex align-center footer__translate__link"><i class="icon icon-brazil"
-                            aria-label="icone-brazil"></i><span>Portuguese</span></a>
+                    <a href="#" class="d-flex align-center footer__translate__link"><i
+                            class="icon icon-usa"></i><span>English</span></a>
+                    <a href="#" class="d-flex align-center footer__translate__link"><i
+                            class="icon icon-brazil"></i><span>Portuguese</span></a>
                 </div>
             </div>
 
@@ -347,7 +361,7 @@
                     <div class="footer__nav__social__item d-flex">
                         <a class="footer__nav__social__item__link" href="#" target="_blank" rel="noopener noreferrer">
                             <svg class="icon">
-                                <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#facebook">
+                                <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#facebook" />
                             </svg>
                             <span>terraminerais</span>
                         </a>
@@ -356,7 +370,7 @@
                     <div class="footer__nav__social__item d-flex">
                         <a class="footer__nav__social__item__link" href="#" target="_blank" rel="noopener noreferrer">
                             <svg class="icon">
-                                <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#instagram">
+                                <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#instagram" />
                             </svg>
                             <span>terraminerais</span>
                         </a>
@@ -365,7 +379,7 @@
                     <div class="footer__nav__social__item d-flex">
                         <a class="footer__nav__social__item__link" href="#" target="_blank" rel="noopener noreferrer">
                             <svg class="icon">
-                                <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#mail">
+                                <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#mail" />
                             </svg>
                             <span>terraminerais</span>
                         </a>
@@ -374,7 +388,7 @@
                     <div class="footer__nav__social__item d-flex">
                         <a class="footer__nav__social__item__link" href="#" target="_blank" rel="noopener noreferrer">
                             <svg class="icon">
-                                <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#whatsapp">
+                                <use xlink:href="images/svg/symbol/svg/sprite.symbol.svg#whatsapp" />
                             </svg>
                             <span>terraminerais</span>
                         </a>

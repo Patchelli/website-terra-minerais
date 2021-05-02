@@ -6,9 +6,15 @@ Responsivo
 }
 
 @media screen and (max-width:960px){
+    html { overflow-x: hidden;}
+    
     header {
         background-color: #000;
         height: 100px;
+
+        .mobile-fix {
+            margin: 0;
+        }
     }
 
     .menu {

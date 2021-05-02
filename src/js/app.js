@@ -12,7 +12,7 @@ $('.menu__overlay').click(() => Menu.toggleMenu());
 $('.menu__mobile__btn').click(() => Menu.toggleMenu());
 
 /*------------------------
-Menu Dinamico
+Menu Dinamico + Scrolltop Icon
 ------------------------*/
 $(function () {
     $(window).scroll(function () {
@@ -21,6 +21,7 @@ $(function () {
             $("header").css('padding-top', '10px');
             $("header").css('padding-bottom', '10px');
             $(".menu__logo img").css('height', '50px');
+            $(".icon-arrow-fixed img").css('opacity', '0.7');
         }
 
         else {
@@ -28,9 +29,15 @@ $(function () {
             $(".menu__logo img").css('height', '85px');
             $("header").css('padding-top', '30px');
             $("header").css('padding-bottom', '0px');
+            $(".icon-arrow-fixed img").css('opacity', '0');
         }
     });
 });
+
+/* Scroll Top */
+$(".icon-arrow-fixed").click(function(){
+    window.scrollTo(0, 0);
+})
 
 /*------------------------
 Home Carousel

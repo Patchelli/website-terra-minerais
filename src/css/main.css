@@ -171,6 +171,7 @@ Estrutura
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-margin-top: 200px;
 }
 
 body {
@@ -806,6 +807,34 @@ Footer
   min-height: 348px;
   margin-top: auto;
 }
+.footer .icon-whatsapp-fixed {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  z-index: 9;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer .icon-whatsapp-fixed:hover {
+  transform: scale(1.07);
+}
+.footer .icon-arrow-fixed img {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: calc(2% + 70px);
+  bottom: 2%;
+  z-index: 9;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0;
+}
+.footer .icon-arrow-fixed img:hover {
+  transform: scale(1.07);
+  opacity: 1 !important;
+}
 .footer__logo .icon {
   width: 239px;
 }
@@ -888,9 +917,16 @@ Responsivo
   }
 }
 @media screen and (max-width: 960px) {
+  html {
+    overflow-x: hidden;
+  }
+
   header {
     background-color: #000;
     height: 100px;
+  }
+  header .mobile-fix {
+    margin: 0;
   }
 
   .menu h1 {
