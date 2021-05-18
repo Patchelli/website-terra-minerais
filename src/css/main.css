@@ -168,10 +168,13 @@ Framework
 /*------------------------
 Estrutura
 ------------------------*/
+:root {
+  scroll-padding-top: 130px;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-margin-top: 200px;
 }
 
 body {
@@ -1089,4 +1092,4 @@ Responsivo
   .contact__message {
     flex-basis: 100%;
   }
-}
+}/*# sourceMappingURL=main.css.map */
